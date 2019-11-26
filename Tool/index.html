@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+function run(){
+var code = document.getElementById("code").value;
+var obj = window.open("","")
+obj.document.open();
+obj.document.write(code);
+obj.document.close();
+}
+</script>
+</head>
+<body>
+<textarea id="code">
+</textarea>
+<button OnClick="run()">
+Run !!</button>
+</body>
+</html>
