@@ -8,31 +8,37 @@ Bilibili
 </title>
 <script type="text/javascript">
 function NEXT(){
+var 选择器 = null;
+if(!(选择器 == null)){
+switch(选择器){
+case
+
+
+}
+}
+  else{
+    alert("请选择访问类型\n然后在点下一步")
+  }
 }
 </script>
 <div>
-  <label>
-<input type="radio" name="Live-ordinary" value="暂无" OnClick="直播平台=null">
-暂无-直播
+<label>
+<input type="radio" name="Type" value="文字类" OnClick=选择器=1">
+文字类
 </input>
-  <label>
-<input type="radio" name="Live-ordinary" value="暂无" OnClick="直播平台=null">
-暂无-直播
+<input type="radio" name="Type" value="图片类" OnClick=选择器=2">
+图片类
 </input>
-  <label>
-<input type="radio" name="Live-ordinary" value="暂无" OnClick="直播平台=null">
-暂无-直播
+<input type="radio" name="Type" value="音乐类" OnClick=选择器=3>
+音乐类
 </input>
-  <label>
-<input type="radio" name="Live-ordinary" value="暂无" OnClick="直播平台=null">
-暂无-直播
+<input type="radio" name="Type" value="视频类" OnClick=选择器=4">
+视频类
 </input>
-  <label>
-<input type="radio" name="Live-ordinary" value="暂无" OnClick="直播平台=null">
-暂无-直播
+<input type="radio" name="Type" value="图文类" OnClick=选择器=5>
 </input>
-<input type="button" value="下一步" class="绑定按钮" OnClick="NEXT()"/>
-</div>
+</label>
+<input type="button" value="下一步" class="下一步" OnClick="NEXT()"/>
 </div>
 </body>
 <html>
