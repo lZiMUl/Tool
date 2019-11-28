@@ -15,16 +15,16 @@ case 1:
 alert("暂无此影片，请等待站长上传");
 break;
 case 2:
-window.location.href="http://izimui.github.io/Tool/Video/Philosophy/VideoData/VANの自我介绍.mp4";
+document.getElementById('VideoView').src="VideoData/VANの自我介绍.mp4";
 break;
 case 3:
-window.location.href="http://izimui.github.io/Tool/Video/Philosophy/VideoData/VANの更衣室.mp4";
+document.getElementById('VideoView').src="VideoData/VANの更衣室.mp4";
 break;
 case 4:
-window.location.href="http://izimui.github.io/Tool/Video/Philosophy/VideoData/Banana_Jun(经典映像).mp4";
+document.getElementById('VideoView').src="VideoData/Banana_Jun(经典映像).mp4";
 break;
 case 5:
-window.location.href="http://izimui.github.io/Tool/Video/Philosophy/VideoData/VANの演讲.mp4";
+document.getElementById('VideoView).src="VideoData/VANの演讲.mp4";
 break;
 case 6:
 alert("暂无此影片，请等待站长上传");  
@@ -78,6 +78,11 @@ VANの演讲〔 可播放 〕
 <br />
 <input type="button" value="上一步" class="按钮" OnClick="window.location.href='http://izimui.github.io/Tool/Video/index.html'"/>
 <input type="button" value="播放" class="按钮" OnClick="Play()"/>
+</div>
+<div>
+<label>
+<embed id="VideoView" src=""/>
+</label>
 </div>
 <h3>
 此页面由 〔触手TV紫幕〕提供
