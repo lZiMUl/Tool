@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>
+Bilibili
+</title>
+<script type="text/javascript">
+var 选择器 = null;
+function NEXT(){
+if(!(选择器 == null)){
+switch(选择器){
+case 1:
+alert("暂无此类型，请等待站长上传");
+break;
+case 2:
+alert("暂无此类型，请等待站长上传");
+break;
+case 3:
+alert("暂无此类型，请等待站长上传");
+break;
+case 4:
+window.location.href="http://izimui.github.io/File/Video/Philosophy/index.html";
+break;
+case 5:
+alert("暂无此类型，请等待站长上传");
+break;
+case 6:
+alert("暂无此类型，请等待站长上传");
+break;
+default:
+alert("非法操作");
+break;
+}
+}
+  else{
+    alert("请选择访问类型\n然后在点下一步")
+  }
+}
+</script>
+<style type="text/css">
+.下一步{
+position:relative;
+left:3%;
+margin:0 auto;
+border-radius:9px;
+}
+</style>
+</head>
+<body>
+<div>
+<label>
+<h3>
+请选择访问类型
+</h3>
+<input type="radio" name="Type" OnClick="选择器=1">
+普通类〔 未完工 〕
+</input>
+<br />
+<input type="radio" name="Type" OnClick="选择器=2">
+鬼畜类〔 未完工 〕
+</input>
+<br />
+<input type="radio" name="Type" OnClick="选择器=3">
+恐怖类〔 未完工 〕
+</input>
+<br />
+<input type="radio" name="Type" OnClick="选择器=4">
+哲学类〔 已完工 〕
+</input>
+<br />
+<input type="radio" name="Type" OnClick="选择器=5">
+猎奇类〔 未完工 〕
+</input>
+<br />
+</label>
+<input type="button" value="下一步" class="下一步" OnClick="NEXT()"/>
+</div>
+</body>
+<html>
