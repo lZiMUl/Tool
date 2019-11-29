@@ -24,11 +24,11 @@ document.getElementById('VideoView')[0].src="VideoData/VANの更衣室.mp4";
 break;
 case 4:
 alert("正在加载中 请稍等");
-document.getElementById('VideoView')[0].src="VideoData/Banana_Jun(经典映像).mp4";
+document.getElementById('VideoView')[0].data="VideoData/Banana_Jun(经典映像).mp4";
 break;
 case 5:
 alert("正在加载中 请稍等");
-document.getElementById('VideoView')[0].src="VideoData/VANの演讲.mp4";
+document.getElementById('VideoView').data="VideoData/VANの演讲.mp4";
 break;
 case 6:
 alert("暂无此影片，请等待站长上传");  
@@ -55,7 +55,7 @@ border-radius:9px;
 <body>
 <div>
 <label>
-<embed id="VideoView" src=""/>
+<object id="VideoView" data=""/>
 </label>
 </div>
 <br />
