@@ -46,9 +46,51 @@ left:3%;
 margin:0 auto;
 border-radius:9px;
 }
+.parent {
+				width: 100%;
+				height: 50px;
+				top: 4px;
+				position: relative;
+			}
+			
+			.parent>input:first-of-type {
+				width: 280px;
+				height: 40px; 
+				border: 1px solid #ccc;
+				font-size: 16px;
+				outline: none;
+			}
+			
+			.parent>input:first-of-type:focus {
+				border: 1px solid #317ef3;
+				padding-left: 10px;
+			}
+			
+			.parent>input:last-of-type {
+				width: 100px;
+				height: 44px; 
+				position: absolute;
+				background: #317ef3;
+				border: 1px solid #317ef3;
+				color: #fff;
+				font-size: 16px;
+				outline: none;
+}
+.parent>input::-ms-input-placeholder{
+        text-align: center;
+}
+.parent>input::-webkit-input-placeholder{
+        text-align: center;
+}
 </style>
 </head>
 <body>
+<div>
+<form action="" class="parent">
+<input type="text" placeholder="请输入搜索内容"/>
+<input type="button" value="搜索" OnClick="alert('暂未开放')"/>
+</form>
+</div>
 <div>
 <label>
 <h3>
