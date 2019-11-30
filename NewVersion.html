@@ -109,7 +109,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoConte
 function DownloadVideoFile(DownloadVideo){
   var link = document.createElement('a');
   link.setAttribute("download",DownloadVideo+".mp4");
-  link.href = "VideoData/"+DownloadVideo+"mp4";
+  link.href = "VideoData/"+DownloadVideo+".mp4";
   link.click();
 };
 function UploadVideo(){
