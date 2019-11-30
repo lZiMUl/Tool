@@ -1,0 +1,64 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+<title>
+实时刷新列表HTML
+</title>
+<script>
+var VideoList = [{
+VideoTitle:"测试",
+VideoUrl:"QQ视频_cd2e299b19283c820e53499b2d76c66a1564150956.mp4",
+VideoAuthor:"站长",
+VideoContent:"暂无",
+VideoDownload:"下载",
+},{
+VideoTitle:"测s试",
+VideoUrl:"QQ视频_cd2e299b19283c820e53499b2d76c66a1564150956.mp4",
+VideoAuthor:"站长",
+VideoContent:"暂无",
+VideoDownload:"下载",
+}];
+
+var 次数 = 0;
+刷新();
+function 刷新(){
+if(!(VideoList[次数].VideoTitle == undefined)){
+setTimeout(function(){
+var 获取控件 = document.getElementById("个人信息");
+获取控件.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent,VideoList[次数].VideoDownload);
+次数=次数+1;
+刷新();
+},100)}};
+
+var 标签体仓库 = "";
+function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent,VideoDownload){
+var 标签头 = "<tr>";
+var 序号 = "<td align='center'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
+var 视频标题 = "<td align='center'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
+var 视频地址 = "<td align='center'><video width='290' height='180' controls='controls' autoplay='autoplay'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
+var 视频作者 = "<td align='center'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
+var 视频简介 = "<td align='center'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
+var 视频下载 = "<td align='center'><button OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
+var 标签尾 = "</tr>";
+var 分割线 = "<td align='center'><br><p>——————分割线——————</p><br></td>"
+var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
+标签体仓库=生成标签体;
+return 生成标签体;
+};
+function DownloadVideoFile(DownloadVideo){
+var link = document.createElement('a');
+link.setAttribute("download",DownloadVideo+".mp4");
+link.href = "VideoData/"+DownloadVideo+"mp4";
+link.click();
+}
+</script>
+</head>
+<body>
+<div>
+<table id="个人信息" align="center" border="1px" width="320" height="230">
+</table>
+</div>
+</body>
+</html>
