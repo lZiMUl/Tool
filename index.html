@@ -8,17 +8,35 @@
 </title>
 <script>
 var VideoList = [{
-VideoTitle:"测试",
-VideoUrl:"QQ视频_cd2e299b19283c820e53499b2d76c66a1564150956.mp4",
+VideoTitle:"Banana_Jun(经典映像)",
+VideoUrl:"VideoData/Banana_Jun(经典映像).mp4",
 VideoAuthor:"站长",
-VideoContent:"暂无",
-VideoDownload:"下载",
+VideoContent:"暂无"
 },{
-VideoTitle:"测s试",
-VideoUrl:"QQ视频_cd2e299b19283c820e53499b2d76c66a1564150956.mp4",
+VideoTitle:"VANの更衣室",
+VideoUrl:"VideoData/VANの更衣室.mp4",
 VideoAuthor:"站长",
-VideoContent:"暂无",
-VideoDownload:"下载",
+VideoContent:"暂无"
+},{
+VideoTitle:"VANの演讲",
+VideoUrl:"VideoData/VANの演讲.mp4",
+VideoAuthor:"站长",
+VideoContent:"暂无"
+},{
+VideoTitle:"VANの自我介绍",
+VideoUrl:"VideoData/VANの自我介绍.mp4",
+VideoAuthor:"站长",
+VideoContent:"暂无"
+},{
+VideoTitle:"老八中餐1",
+VideoUrl:"VideoData/老八中餐1.mp4",
+VideoAuthor:"站长",
+VideoContent:"暂无"
+},{
+VideoTitle:"老八中餐2",
+VideoUrl:"VideoData/老八中餐2.mp4",
+VideoAuthor:"站长",
+VideoContent:"暂无"
 }];
 
 var 次数 = 0;
@@ -27,13 +45,13 @@ function 刷新(){
 if(!(VideoList[次数].VideoTitle == undefined)){
 setTimeout(function(){
 var 获取控件 = document.getElementById("个人信息");
-获取控件.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent,VideoList[次数].VideoDownload);
+获取控件.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
 次数=次数+1;
 刷新();
 },100)}};
 
 var 标签体仓库 = "";
-function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent,VideoDownload){
+function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
 var 标签头 = "<tr>";
 var 序号 = "<td align='center'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
 var 视频标题 = "<td align='center'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
