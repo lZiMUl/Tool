@@ -99,7 +99,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoConte
   var 视频地址 = "<td align='center'><video width='330' height='180' controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
   var 视频作者 = "<td align='center'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
   var 视频简介 = "<td align='center'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
-  var 视频下载 = "<td align='center'><button OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
+  var 视频下载 = "<td align='center'><button style="border-radius:9px;" OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
   var 标签尾 = "</tr>";
   var 分割线 = "<td align='center'><br><p>——————分割线——————</p><a href='https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes'>点击申请上传视频</a><p>——————分割线——————</p><br></td>"
   var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
