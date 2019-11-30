@@ -4,117 +4,120 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
 <title>
-实时刷新列表HTML
+Bili—Blil 〔 Beta版 〕
 </title>
 <style type="text/css">
 .parent {
-				width: 100%;
-				height: 50px;
-				top: 4px;
-				position: relative;
-			}
-			.parent>input:first-of-type {
-				width: 280px;
-				height: 40px; 
-				border: 1px solid #ccc;
-				font-size: 16px;
-				outline: none;
-			}		
-			.parent>input:first-of-type:focus {
-				border: 1px solid #317ef3;
-				padding-left: 10px;
-			}			
-			.parent>input:last-of-type {
-				width: 100px;
-				height: 44px; 
-				position: absolute;
-				background: #317ef3;
-				border: 1px solid #317ef3;
-				color: #fff;
-				font-size: 16px;
-        outline: none;
+  width: 100%;
+  height: 50px;
+  top: 4px;
+  position: relative;
+}
+.parent>input:first-of-type {
+  width: 210px;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+} 
+.parent>input:first-of-type:focus {
+  border: 1px solid #317ef3;
+  padding-left: 1px;
+}  
+.parent>input:last-of-type {
+  width: 100px;
+  height: 44px;
+  background: #317ef3;
+  border: 1px solid #317ef3;
+  color: #fff;
+  margin-top: 5px;
+  font-size: 26px;
+  outline: none;
 }
 .parent>input::-ms-input-placeholder{
-text-align: center;
+  text-align: center;
 }
 .parent>input::-webkit-input-placeholder{
-text-align: center;
+  text-align: center;
 }
 </style>
 <script>
 var VideoList = [{
-VideoTitle:"Banana_Jun(经典映像)",
-VideoUrl:"VideoData/Banana_Jun(经典映像).mp4",
-VideoAuthor:"触手TV紫幕",
-VideoContent:"暂无"
+  VideoTitle:"Banana_Jun(经典映像)",
+  VideoUrl:"VideoData/Banana_Jun(经典映像).mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
 },{
-VideoTitle:"VANの更衣室",
-VideoUrl:"VideoData/VANの更衣室.mp4",
-VideoAuthor:"触手TV紫幕",
-VideoContent:"暂无"
+  VideoTitle:"VANの更衣室",
+  VideoUrl:"VideoData/VANの更衣室.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
 },{
-VideoTitle:"VANの演讲",
-VideoUrl:"VideoData/VANの演讲.mp4",
-VideoAuthor:"触手TV紫幕",
-VideoContent:"暂无"
+  VideoTitle:"VANの演讲",
+  VideoUrl:"VideoData/VANの演讲.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
 },{
-VideoTitle:"VANの自我介绍",
-VideoUrl:"VideoData/VANの自我介绍.mp4",
-VideoAuthor:"触手TV紫幕",
-VideoContent:"暂无"
+  VideoTitle:"VANの自我介绍",
+  VideoUrl:"VideoData/VANの自我介绍.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
 },{
-VideoTitle:"老八中餐1",
-VideoUrl:"VideoData/老八中餐1.mp4",
-VideoAuthor:"触手TV紫幕",
-VideoContent:"暂无"
+  VideoTitle:"老八中餐1",
+  VideoUrl:"VideoData/老八中餐1.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
 },{
-VideoTitle:"老八中餐2",
-VideoUrl:"VideoData/老八中餐2.mp4",
-VideoAuthor:"触手TV紫幕",
-VideoContent:"暂无"
+  VideoTitle:"老八中餐2",
+  VideoUrl:"VideoData/老八中餐2.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
 }];
 
 var 次数 = 0;
 刷新();
 function 刷新(){
-if(!(VideoList[次数].VideoTitle == undefined)){
-setTimeout(function(){
-var 获取控件 = document.getElementById("个人信息");
-获取控件.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
-次数=次数+1;
-刷新();
-},100)}};
+  if(!(VideoList[次数].VideoTitle == undefined)){
+    setTimeout(function(){
+      var 获取控件 = document.getElementById("个人信息");
+      获取控件.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      次数=次数+1;
+      刷新();
+    },100)}};
 
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
-var 标签头 = "<tr>";
-var 序号 = "<td align='center'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
-var 视频标题 = "<td align='center'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
-var 视频地址 = "<td align='center'><video width='290' height='180' controls='controls' autoplay='autoplay'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
-var 视频作者 = "<td align='center'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
-var 视频简介 = "<td align='center'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
-var 视频下载 = "<td align='center'><button OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
-var 标签尾 = "</tr>";
-var 分割线 = "<td align='center'><br><p>——————分割线——————</p><br></td>"
-var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
-标签体仓库=生成标签体;
-return 生成标签体;
+  var 标签头 = "<tr>";
+  var 序号 = "<td align='center'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
+  var 视频标题 = "<td align='center'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
+  var 视频地址 = "<td align='center'><video width='290' height='180' controls='controls' autoplay='autoplay'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
+  var 视频作者 = "<td align='center'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
+  var 视频简介 = "<td align='center'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
+  var 视频下载 = "<td align='center'><button OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
+  var 标签尾 = "</tr>";
+  var 分割线 = "<td align='center'><br><p>——————分割线——————</p><br></td>"
+  var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
+  标签体仓库=生成标签体;
+  return 生成标签体;
 };
 function DownloadVideoFile(DownloadVideo){
-var link = document.createElement('a');
-link.setAttribute("download",DownloadVideo+".mp4");
-link.href = "VideoData/"+DownloadVideo+"mp4";
-link.click();
+  var link = document.createElement('a');
+  link.setAttribute("download",DownloadVideo+".mp4");
+  link.href = "VideoData/"+DownloadVideo+"mp4";
+  link.click();
 }
 </script>
 </head>
-<body>
+<body bgcolor="#FFC0CB">
 <div align="center">
 <form action="" class="parent">
-<input type="text" placeholder="请输入搜索内容"/>
+<input type="text" placeholder="请输入搜索内容"/><br>
 <input type="button" value="搜索" OnClick="alert('暂未开放')"/>
 </form>
 </div>
+<br>
+<br>
+<br>
 <div>
 <table id="个人信息" align="center" border="1px" width="320" height="230">
 </table>
