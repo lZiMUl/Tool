@@ -12,6 +12,7 @@ Bili—Blil 〔 Beta版 〕
   height: 50px;
   top: 4px;
   position: relative;
+  border-radius:9px;
 }
 .parent>input:first-of-type {
   width: 210px;
@@ -19,10 +20,12 @@ Bili—Blil 〔 Beta版 〕
   border: 1px solid #ccc;
   font-size: 16px;
   outline: none;
+  border-radius:9px;
 } 
 .parent>input:first-of-type:focus {
   border: 1px solid #317ef3;
   padding-left: 1px;
+  border-radius:9px;
 }  
 .parent>input:last-of-type {
   width: 100px;
@@ -33,12 +36,15 @@ Bili—Blil 〔 Beta版 〕
   margin-top: 5px;
   font-size: 26px;
   outline: none;
+  border-radius:9px;
 }
 .parent>input::-ms-input-placeholder{
   text-align: center;
+  border-radius:9px;
 }
 .parent>input::-webkit-input-placeholder{
   text-align: center;
+  border-radius:9px;
 }
 </style>
 <script>
@@ -95,7 +101,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoConte
   var 视频简介 = "<td align='center'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
   var 视频下载 = "<td align='center'><button OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
   var 标签尾 = "</tr>";
-  var 分割线 = "<td align='center'><p>——————分割线——————</p><a href='https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes'>点击申请上传视频</a><p>——————分割线——————</p></td>"
+  var 分割线 = "<td align='center'><br><p>——————分割线——————</p><a href='https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes'>点击申请上传视频</a><p>——————分割线——————</p><br></td>"
   var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
   标签体仓库=生成标签体;
   return 生成标签体;
