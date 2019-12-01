@@ -33,7 +33,7 @@ Bili—Blil 〔 Beta版 〕
   background: #317ef3;
   border: 1px solid #317ef3;
   color: #fff;
-  margin-top: 5px;
+  margin-top: 7px;
   font-size: 26px;
   outline: none;
   border-radius:9px;
@@ -79,7 +79,6 @@ var VideoList = [{
   VideoAuthor:"触手TV紫幕",
   VideoContent:"暂无"
 }];
-
 var 次数 = 0;
 刷新();
 function 刷新(){
@@ -90,7 +89,6 @@ function 刷新(){
       次数=次数+1;
       刷新();
     },100)}};
-
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
   var 标签头 = "<tr>";
@@ -127,7 +125,21 @@ alert('暂时不支持上传\n您可以找站长帮您上传\n点击下方蓝色
 <br>
 <br>
 <br>
+<div align="center">
+<label for="unittype">请选择视频类型〔 </label>
+<select id="unittype" name="unittype" autofocus >
+   <option value="1" selected>全 部</option>
+   <option value="2">普 通</option>
+   <option value="3">名场面</option>
+   <option value="4">鬼 畜</option>
+   <option value="5">哲♂学</option>
+   <option value="6">恐 怖</option>
+</select>
+<label for="unittype"> 〕该功能暂时无法使用</label>
+</div>
+<br>
 <div>
+<br>
 <table id="个人信息" align="center" border="1px" width="320" height="230">
 </table>
 </div>
