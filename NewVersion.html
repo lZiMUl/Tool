@@ -92,12 +92,12 @@ function 刷新(){
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
   var 标签头 = "<tr>";
-  var 序号 = "<td align='center'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
-  var 视频标题 = "<td align='center'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
-  var 视频地址 = "<td align='center'><video width='330' height='180' controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
-  var 视频作者 = "<td align='center'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
-  var 视频简介 = "<td align='center'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
-  var 视频下载 = "<td align='center'><button style='border-radius:9px;' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
+  var 序号 = "<td align='center' bgcolor='#00FFCC'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
+  var 视频标题 = "<td align='center' bgcolor='#00FFCC'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
+  var 视频地址 = "<td align='center' bgcolor='#00FFCC'><video width='330' height='180' controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
+  var 视频作者 = "<td align='center' bgcolor='#00FFCC'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
+  var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
+  var 视频下载 = "<td align='center' bgcolor='#00FFCC'><button style='border-radius:9px;' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
   var 标签尾 = "</tr>";
   var 分割线 = "<td><br><p align='center' bgcolor='#9F5F9F'>——————分割线——————</p><br></td>";
   var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
