@@ -88,7 +88,7 @@ function 刷新(){
       获取控件.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
       刷新();
-    },1000)}};
+    },100)}};
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
   var 标签头 = "<tr>";
@@ -99,7 +99,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoConte
   var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
   var 视频下载 = "<td align='center' bgcolor='#00FFCC'><button style='border-radius:9px;' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
   var 标签尾 = "</tr>";
-  var 分割线 = "<td align='center' bgcolor='#FF9933'><br><p align='center'>——————分割线——————</p><br></td>";
+  var 分割线 = "<td align='center' bgcolor='#FF33FF'><br><p align='center'>——————分割线——————</p><br></td>";
   var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
   标签体仓库=生成标签体;
   return 生成标签体;
@@ -129,7 +129,7 @@ alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底
 <br>
 <br>
 <div align="center">
-<label for="unittype">请选择视频类型〔 </label>
+<label for="unittype" color='FF9933'>请选择视频类型〔 </label>
 <select id="unittype" name="unittype" autofocus >
    <option value="1" selected>全 部</option>
    <option value="2">普 通</option>
