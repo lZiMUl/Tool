@@ -30,7 +30,7 @@ Bili—Blil 〔 Beta版 〕
 .parent>input:last-of-type {
   width: 100px;
   height: 44px;
-  background: #317ef3;
+  background: #FF3333;
   border: 1px solid #317ef3;
   color: #fff;
   margin-top: 7px;
@@ -99,7 +99,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoConte
   var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
   var 视频下载 = "<td align='center' bgcolor='#00FFCC'><button style='border-radius:9px;' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
   var 标签尾 = "</tr>";
-  var 分割线 = "<td align='center' bgcolor='#9F5F9F'><br><p align='center'>——————分割线——————</p><br></td>";
+  var 分割线 = "<td align='center' bgcolor='#FF9933'><br><p align='center'>——————分割线——————</p><br></td>";
   var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
   标签体仓库=生成标签体;
   return 生成标签体;
@@ -117,11 +117,11 @@ alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底
 </head>
 <body bgcolor="#FFC0CB">
 <table align="center" border="1px">
-<td  width='330' height='180' bgcolor="#996633">
+<td  width='330' height='180' bgcolor="#3333FF">
 <br>
 <div align="center">
 <form action="" class="parent">
-<input type="text" placeholder="这里输入搜索内容" style="text-align:center"/><br>
+<input type="text" placeholder="这里输入搜索内容" style="text-align:center"/><br><br>
 <input type="button" value="搜索" OnClick="alert('暂未开放')"/>
 </form>
 </div>
