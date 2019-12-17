@@ -6,34 +6,49 @@
 <title>
 It's loading
 </title>
-<script type="text/javascript">
-window.location.href="https://izimui.github.io/WEB-SITE/";
-</script>
 </head>
-<body>
-<div>
-<table>
+<body bgcolor="#FFC0CB">
+<div align="center" style="margin-top:50%" style="width:100%; height:100%">
+<table border="1px">
 <tr>
-<td>
+<td align="center" style="margin:0px" bgcolor="#FF99F3">
+<br>
 <font>请输入访问秘钥</font>
+<br>
+<br>
 </td>
 </tr>
 <tr>
-<td>
-<input id="秘钥输入框" type="text"></input>
+<td align="center" width="300px"; height="100px" style="margin:0px;" bgcolor="#CCFF36">
+<input id="秘钥输入框" type="text" placeholder="请输入网站秘钥" onkeyup="this.value=this.value.replace(/\s+/g,'')" style="width:80%; height:100%;margin:0px;text-align:center; border-radius:9px" ></input>
 </td>
 </tr>
 <tr>
-<td>
-<input type="button" value="下一步"></input>
+<td align="center" width="300px"; height="60px" style="margin:0px" bgcolor="#FF9933">
+<input type="button" value="下一步" style="width:60%; height:100%; border-radius:9px; bgcolor:#969696" OnClick="run()"></input>
 </td>
 </tr>
 <tr>
-<td>
-<a hred="">点击查看您的专属秘钥</a>
+<td align="center" width="300px"; height="100px" style="margin:0px" bgcolor="#00FF36">
+<a href="https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1576594480076">点击此处获取秘钥(关注私聊我获取秘钥) 😂😂😂</a>
 </td>
 </tr>
 </table>
 </div>
 </body>
+<script type="text/javascript">
+function run(){
+if(!(document.getElementById("秘钥输入框").value == "")){
+if(document.getElementById("秘钥输入框").value == 秘钥()){
+window.location.href="https://izimui.github.io/WEB-SITE/";
+} else {
+alert("秘钥错误");
+}} else {
+alert("请输入秘钥");
+}};
+function 秘钥(){
+var 数据 = eval("\u0034\u0031\u0039\u0039\u0030\u0037\u0030\u0034\u002a\u0028\u006e\u0065\u0077\u0020\u0044\u0061\u0074\u0065\u0029\u002e\u0067\u0065\u0074\u004d\u0069\u006e\u0075\u0074\u0065\u0073\u0028\u0029\u002b\u0028\u004d\u0061\u0074\u0068\u002e\u0050\u0049\u002d\u004d\u0061\u0074\u0068\u002e\u0050\u0049\u002b\u0035\u0032\u0030\u0029\u002a\u0032\u0039\u0030\u0038\u0035\u0035\u0034\u0030\u0036\u0039\u003b")
+return 数据+数据;
+}
+</script>
 <html>
