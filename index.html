@@ -40,7 +40,8 @@ It's loading
 function run(){
 if(!(document.getElementById("秘钥输入框").value == "")){
 if(document.getElementById("秘钥输入框").value == 秘钥()){
-window.location.href="https://izimui.github.io/WEB-SITE/index.html?WebSite-license=true"+(new Date).getMinutes();
+var 时间 = new Date;
+window.location.href="https://izimui.github.io/WEB-SITE/index.html?WebSite-license=true"+时间.getMinutes();
 } else {
 alert("秘钥错误");
 }} else {
