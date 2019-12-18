@@ -38,6 +38,11 @@ It's loading
 <p>提示：\n本网站秘钥是免费的；<br>如果您是购买的；<br>那你就是被骗了。</p>
 </td>
 </tr>
+<tr>
+<td align="center" width="300px"; height="100px" style="margin:0px" bgcolor="#00FF36">
+<p id="当前时间></p>
+</td>
+</tr>
 </table>
 </div>
 </body>
@@ -55,6 +60,21 @@ alert("请输入秘钥");
 function 秘钥(){
 var 数据 = eval("\u0034\u0031\u0039\u0039\u0030\u0037\u0030\u0034\u002a\u0028\u006e\u0065\u0077\u0020\u0044\u0061\u0074\u0065\u0029\u002e\u0067\u0065\u0074\u0048\u006f\u0075\u0072\u0073\u0028\u0029\u002b\u0028\u004d\u0061\u0074\u0068\u002e\u0050\u0049\u002b\u0031\u002d\u004d\u0061\u0074\u0068\u002e\u0050\u0049\u002b\u0031\u002b\u0035\u0032\u0030\u0029\u002a\u0032\u0039\u0030\u0038\u0035\u0035\u0034\u0030\u0036\u0039\u003b");
 return 数据+数据;
+};
+function 时间(){
+  setTimeout(function(){
+    var 当前时间 = {
+年:new Date().getFullYear(),
+月:new Date().getMonth() + 1,
+日:new Date().getDate(),
+时:new Date().getHours(),
+分:new Date().getMinutes(),
+秒:new Date().getSeconds()
+};
+var 时间 = 当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.日 + "日" + 当前时间.时 + "时" + 当前时间.分 + "分" + 当前时间.秒 + "秒";
+    document.getElementById("当前时间").innerHTML = 时间;
+    时间();
+  },10);
 }
 </script>
 <html>
