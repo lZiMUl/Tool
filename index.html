@@ -47,6 +47,8 @@ BSFPVW官网〔 秘钥访问页面 〕
 </div>
 </body>
 <script type="text/javascript">
+var 浏览器 = navigator.userAgent;
+if(!(浏览器.indexOf('Gecko') > -1 && 浏览器.indexOf('KHTML') == -1)){
 刷新时间();
 function run(){
 if(!(document.getElementById("秘钥输入框").value == "")){
@@ -76,6 +78,9 @@ var 时间 = 当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.
     document.getElementById("当前时间").innerHTML = 时间;
     刷新时间();
   },10);
+}} else {
+alert("此网页不支持火狐浏览器");
+window.location.href="https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1577016267974"
 }
 </script>
 <html>
