@@ -7,20 +7,11 @@
 BSFPVW官网〔 秘钥访问页面 〕
 </title>
 <script type="text/javascript">
-var sUserAgent = navigator.userAgent.toLowerCase();
-    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-    var bIsAndroid = sUserAgent.match(/android/i) == "android";
-    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM)) {
+if (!(navigator.userAgent.indexOf("Mobile")) {
 alert("此网站不支持电脑端\n尽情期待");
 } else {
 var 浏览器 = navigator.userAgent;
-if(!(浏览器.indexOf('Gecko') > -1 && 浏览器.indexOf('KHTML') == -1)){
+if(!(浏览器.indexOf("Gecko") > -1 && 浏览器.indexOf('KHTML') == -1)){
 刷新时间();
 function run(){
 if(!(document.getElementById("秘钥输入框").value == "")){
