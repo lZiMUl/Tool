@@ -46,6 +46,7 @@ window.location.href="https://space.bilibili.com/291883246?share_medium=android&
 </script>
 </head>
 <body bgcolor="#FFC0CB">
+<from action="#" method="post">
 <div align="center" style="margin-top:15%; width:100%; height:100%">
 <table border="1px">
 <tr>
@@ -58,12 +59,12 @@ window.location.href="https://space.bilibili.com/291883246?share_medium=android&
 </tr>
 <tr>
 <td align="center" width="300px"; height="70px" style="margin:0px;" bgcolor="#CCFF36">
-<input id="秘钥输入框" type="text" placeholder="请输入〔 BSFPVW 〕网站秘钥" onkeyup="this.value=this.value.replace(/\s+/g,'')" style="width:80%; height:80%;margin:0px;text-align:center; border-radius:9px" ></input>
+<input id="秘钥输入框" type="text" placeholder="请输入〔 BSFPVW 〕网站秘钥" autocomplete="on" onkeyup="this.value=this.value.replace(/\s+/g,'')" style="width:80%; height:80%;margin:0px;text-align:center; border-radius:9px" ></input>
 </td>
 </tr>
 <tr>
 <td align="center" width="300px"; height="60px" style="margin:0px" bgcolor="#FF9933">
-<input type="button" value="下一步" style="width:60%; height:60%; border-radius:9px; bgcolor:#969696" OnClick="run()"></input>
+<input type="submit" value="下一步" style="width:60%; height:60%; border-radius:9px; bgcolor:#969696" OnClick="run()"></input>
 </td>
 </tr>
 <tr>
@@ -83,5 +84,6 @@ window.location.href="https://space.bilibili.com/291883246?share_medium=android&
 </tr>
 </table>
 </div>
+</from>
 </body>
 <html>
