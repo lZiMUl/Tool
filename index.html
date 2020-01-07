@@ -30,6 +30,7 @@ return 数据+数据;
 };
 
 function 获取秘钥(){
+setTimeout(function(){
         var 内容 = 秘钥();
         var oInput = document.createElement("input");
         oInput.value = 内容;
@@ -39,6 +40,7 @@ function 获取秘钥(){
         oInput.className = "oInput";
         oInput.style.display="none";
         alert("获取成功");
+},3000);
 }
 
 function 刷新时间(){
