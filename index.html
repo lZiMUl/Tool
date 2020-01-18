@@ -7,6 +7,86 @@
 BSFPVW官网〔 秘钥访问界面 〕
 </title>
 <embed src="https://IZIMUI.github.io/WEB-SITE/BackgroundMusic.mp3" hidden="true" autostart="true" loop="true"/>
+<style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        .button{
+            border: 0;    /* 去除原button边框样式 */
+            background-color: coral;
+            color: #fff;
+            padding: 1em 2em;
+        }
+        .button:hover{
+            background-color: #333;
+        }
+        .modal{
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0,0.5);
+        }
+        .modal-content{
+            background-color: #f4f4f4;
+            margin: 15% auto;
+            width: 80%;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0,0.2), 0 7px 20px 0 rgba(0, 0, 0,0.2);
+            animation-name: modalopen;
+            animation-duration: 1s;
+        }
+        .modal-header h2,.modal-footer h3{
+            margin: 0;
+        }
+        .modal-header{
+            background-color: coral;
+            padding: 15px;
+            color: #fff;
+        }
+        .closeBtn{
+            color: #fff;
+            float: right;
+            font-size: 30px;
+        }
+        .closeBtn:hover,.closeBtn:focus{
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-body{
+            padding:10px 20px; 
+        }
+        .modal-footer{
+            color: #fff;
+            background-color: coral;
+            padding: 10px;
+            text-align: center;
+        }
+        @keyframes modalopen{
+            from {opacity: 0}
+            to {opacity: 1}
+        }
+        .message-box-cancel,
+        .message-box-confirm {
+            width: 30%;
+            height: 100%;
+            line-height: 20px;
+            color: #ffffff;
+        }
+        
+        .message-box-cancel {
+            background-color: #FF6400;
+        }
+        
+        .message-box-confirm {
+            background-color: #8f9498;
+        }
 </style>
 <script type="text/javascript">
 var 浏览器 = navigator.userAgent;
@@ -57,12 +137,20 @@ function 下载软件(){
   link.href = "https://IZIMUI.github.io/WEB-SITE/BSFPVW.apk";
   link.click();
   };
-
+        // 获取弹窗元素
+        var Modal = document.getElementById("simpleModal");
+ 
+        // 获取按钮元素
+        var ModalBtn = document.getElementById("modalBtn");
+ 
+        // 获取关闭弹窗按钮元素
+        var CloseBtn = document.getElementsByClassName("closeBtn")[0];
 }} else {
 alert("此网页不支持火狐浏览器");
 window.location.href="https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1577016267974"
 };
 </script>
+<script src="http://izimui.github.io/WEB-SITE/lZIMUl.js"></script>
 </head>
 <body bgcolor="#FFC0CB">
 <from action="#" method="post">
@@ -114,5 +202,21 @@ window.location.href="https://space.bilibili.com/291883246?share_medium=android&
 </table>
 </div>
 </from>
+    <!-- 弹框部分 -->
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <h2 align="center">用户登陆</h2>
+            </div>
+            <div  align="center" class="modal-body"><br>
+            <div>账号：<input type="text"></input>&nbsp;&nbsp;&nbsp;&nbsp;<button class="message-box-cancel" onclick="Landing()">登陆</button></div><br>
+            <div>密码：<input type="text"></input>&nbsp;&nbsp;&nbsp;&nbsp;<button class="message-box-confirm" onclick="Register()">注册</button></div>
+            </p></div>
+            <div class="modal-footer">
+                <h3>测试弹窗</h3>
+            </div>
+        </div>
+    </div>
 </body>
 <html>
