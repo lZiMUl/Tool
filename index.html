@@ -118,7 +118,7 @@ BSFPVW官网〔 秘钥访问界面 〕
 </tr>
 <tr>
 <td align="center" width="300px"; height="100px" style="margin:0px" bgcolor="#00FF36">
-<a href="https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1576594480076" style="text-decoration: none;">😊点击此处获取〔 账号&密码&秘钥 〕😊<br><br>😏(关注UP主获得秘钥)😏<br><br>😂(记得分享给你的小伙♂伴哦)😂</a>
+<a href="https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1576594480076" style="text-decoration: none;">😊点击此处获取〔 账号&密码&秘钥 〕😊<br><br>😏(关注UP主获得)😏<br><br>😂(喜欢的记得分享出去哦)😂</a>
 </td>
 </tr>
 <!--<tr>
@@ -167,6 +167,7 @@ if(!(浏览器.indexOf("Gecko") > -1 && 浏览器.indexOf('KHTML') == -1)){
 Run()
 function Run(){
 if(Login == false){
+alert("哎呦 你还没有登陆哦 请先登陆在进入")
         // 获取弹窗元素
         var Modal = document.getElementById("simpleModal");
         // 获取按钮元素
@@ -222,7 +223,7 @@ if(document.getElementById("User").value !== ""){
 if(MD5(Encode(MD5(document.getElementById("User").value))) == MD5(Encode("7ae113d2418dcd542579aeefc59aa073"))){
 if(document.getElementById("Password").value !== ""){
 if(MD5(Encode(MD5(document.getElementById("Password").value))) == MD5(Encode("ba43b32e4461cf3dd37b5d0dbc24be79"))){
-alert("登陆成功");
+alert("登陆成功 现在可以输入秘钥进去了");
 document.getElementById("simpleModal").style.display = "none";
 Login = true
 } else {
