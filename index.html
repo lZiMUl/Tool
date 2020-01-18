@@ -219,9 +219,9 @@ window.location.href="https://space.bilibili.com/291883246?share_medium=android&
 };
 function Landing(){
 if(document.getElementById("User").value !== ""){
-if(MD5(document.getElementById("User").value) == MD5(Decode("\u0032\u0039\u0030\u0038\u0035\u0035\u0034\u0030\u0036\u0039"))){
+if(MD5(Encode(MD5(document.getElementById("User").value))) == MD5(Encode("7ae113d2418dcd542579aeefc59aa073"))){
 if(document.getElementById("Password").value !== ""){
-if(MD5(document.getElementById("Password").value) == MD5(Decode("\u0035\u0034\u0030\u0036\u0039\u0032\u0039\u0030\u0038\u0035"))){
+if(MD5(Encode(MD5(document.getElementById("Password").value))) == MD5(Encode("ba43b32e4461cf3dd37b5d0dbc24be79"))){
 alert("登陆成功");
 document.getElementById("simpleModal").style.display = "none";
 Login = true
