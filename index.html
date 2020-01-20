@@ -151,8 +151,8 @@ BSFPVW官网〔 秘钥访问界面 〕
                 <h2 align="center">用户登陆</h2>
             </div>
             <div  align="center" class="modal-body"><br>
-            <div>账号：<input id="User" type="text" class="Userinput"></input>&nbsp;&nbsp;&nbsp;&nbsp;<button class="message-box-cancel" onclick="Landing()">登陆</button></div><br>
-            <div>密码：<input id="Password" type="text" class="Userinput"></input>&nbsp;&nbsp;&nbsp;&nbsp;<button class="message-box-confirm" onclick="Register()">注册</button></div>
+            <div><input id="User" type="text" placeholder="请输入账号" class="Userinput"></input>&nbsp;&nbsp;&nbsp;&nbsp;<button class="message-box-cancel" onclick="Landing()">登陆</button></div><br>
+            <div><input id="Password" type="password" placeholder="请输入密码" class="Userinput"></input>&nbsp;&nbsp;&nbsp;&nbsp;<button class="message-box-confirm" onclick="Register()">注册</button></div>
             </p></div>
             <div class="modal-footer">
                 <h3>站长B站〔 lZIMUl 〕<br>站长QQ 〔 2908554069 〕<br>如果有问题可以随时问</h3>
@@ -227,7 +227,7 @@ if(document.getElementById("User").value !== ""){
 if(MD5(Encode(MD5(document.getElementById("User").value))) == MD5(Encode("7ae113d2418dcd542579aeefc59aa073"))){
 if(document.getElementById("Password").value !== ""){
 if(MD5(Encode(MD5(document.getElementById("Password").value))) == MD5(Encode("ba43b32e4461cf3dd37b5d0dbc24be79"))){
-alert("登陆成功 现在可以输入秘钥进去了");
+alert("登陆成功\n\n欢迎〔 lZIMUl 〕回来 ");
 document.getElementById("simpleModal").style.display = "none";
 Login = true
 } else {
