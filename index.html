@@ -180,7 +180,7 @@ var Vip;
 function UserSystem(Data){
 var UserValue = 0;
 var UserDataS;
-GetData()
+GetData();
 function GetData(){
 if(Data == UserList[UserValue].AccountNumber){
 Name = UserList[UserValue].Name;
@@ -204,7 +204,7 @@ SecretKey = UserList[UserValue].SecretKey;
 Vip = UserList[UserValue].Vip;
 } else {
 if(UserValue == UserList.length-1){
-UserDatas = false
+UserDatas = false;
 } else {
 UserValue++;
 GetData();
@@ -213,7 +213,7 @@ GetData();
 return UserDatas
 };
 
-var Tips = false
+var Tips = false;
 var Login = false;
 var 浏览器 = navigator.userAgent;
 if(!(浏览器.indexOf("Gecko") > -1 && 浏览器.indexOf('KHTML') == -1)){
