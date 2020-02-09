@@ -172,8 +172,11 @@ var UserList= new Array(
 );
 
 var Name;
+var Gender;
+var Age;
 var PasswordData;
 var SecretKey;
+var Vip;
 function UserSystem(Data){
 var UserValue = 0;
 var UserDataS;
@@ -181,9 +184,24 @@ GetData()
 function GetData(){
 if(Data == UserList[UserValue].AccountNumber){
 Name = UserList[UserValue].Name;
+switch(UserList[UserValue].Gender){
+case "男":
+Gender = "小哥哥";
+break;
+
+case "女":
+Gender = "小姐姐";
+break;
+
+undefined:
+Gender = "人妖";
+break;
+};
+Age = UserList[UserValue].Age;
 UserDatas = UserList[UserValue].AccountNumber;
 PasswordData = UserList[UserValue].Password;
 SecretKey = UserList[UserValue].SecretKey;
+Vip = UserList[UserValue].Vip;
 } else {
 if(UserValue == UserList.length-1){
 UserDatas = false
@@ -260,10 +278,15 @@ if(document.getElementById("User").value == UserSystem(document.getElementById("
 if(document.getElementById("Password").value !== ""){
 if(MD5(document.getElementById("Password").value) == PasswordData){
 if(MD5(prompt("请输入密钥")) == SecretKey){
-alert("登陆成功\n\n欢迎〔 "+ Name +" 〕回来 ");
+if(Vip == true){
+alert("登陆成功\n\n欢迎尊贵的〔 "+ Name +" 〕,〔 "+ Age +" 〕岁的〔 "+ Gender +" 〕黑金会员回来");
 document.getElementById("simpleModal").style.display = "none";
-Login = true
+Login = true;
 } else {
+alert("登陆成功\n\n欢迎〔 "+ Name +" 〕,〔 "+ Age +" 〕岁的〔 "+ Gender +" 〕回来\n\n当前你还不是VIP哦\n\n找站长进行免费开通\n更多花里胡哨的特权等着您");
+document.getElementById("simpleModal").style.display = "none";
+Login = true;
+}} else {
 alert("密钥认证错误")
 }} else {
 alert("密码错误")
