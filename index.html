@@ -6,7 +6,6 @@
 <title>
 BSFPVW官网〔 秘钥访问界面 〕
 </title>
-<embed src="https://IZIMUI.github.io/WEB-SITE/BackgroundMusic.mp3" hidden="true" autostart="true" loop="true"/>
 <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -276,7 +275,7 @@ if(document.getElementById("User").value !== ""){
 if(document.getElementById("User").value == UserSystem(document.getElementById("User").value)){
 if(document.getElementById("Password").value !== ""){
 if(MD5(document.getElementById("Password").value) == PasswordData){
-if(MD5(prompt("请输入密钥")) == SecretKey){
+if(MD5(prompt("请输入账号安全密钥")) == SecretKey){
 if(Vip == true){
 alert("登陆成功\n\n欢迎尊贵的〔 "+ Name +" 〕,〔 "+ Age +" 〕岁的〔 "+ Gender +" 〕黑金会员回来");
 document.getElementById("simpleModal").style.display = "none";
