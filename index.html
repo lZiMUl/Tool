@@ -229,10 +229,12 @@ if(Tips == true){
 alert("正在打开bilibili，关注up主获取秘钥)
 setTimeout(function(){
 window.location.href = "https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1584978629443"
+setTimeout(function(){
 if(prompt("请输入进入秘钥") == "41992908550704"){
 alert("哎呦 你还没有登陆哦 请先登陆在进入")
 Tips = true;
-}})
+},2000)
+}},3000)
 };
 var Modal = document.getElementById("simpleModal");
 var ModalBtn = document.getElementById("Next");
